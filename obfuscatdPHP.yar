@@ -10,9 +10,9 @@
 
 rule scpx_phpGET {
    meta:
-      description = "phpGET.php"
+      description = "Obfuscated bitwise"
       author = "Gil Stolar"
-      reference = "https://https://github.com/gil121983"
+      reference = "https://github.com/gil121983/obfuscatedPHP"
       date = "2021-01-06"
    strings:
       $re1 = /\(.{1,}[\&\^\|\>{2}\<{2}]".{1,}"\)\.\(.{1,}[\&\^\|\>{2}\<{2}]".{1,}"\)\.\(.{1,}[\&\^\|\>{2}\<{2}]".{1,}"\)/ wide ascii fullword
