@@ -1,5 +1,4 @@
 ---------
 HiddenGET  
 ---------
-
-A simple YARA rule made with regex to catch GET requets that are generated dynamically with bitwise operations.
+A simple YARA rule made with regex to catch obfuscated GET requets that are generated with bitwise operations.
