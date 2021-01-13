@@ -46,3 +46,16 @@ rule suspicious_replace {
    condition:
       all of them
 }
+
+rule suspicious_function_call {
+   meta:
+      description = "suspicious function call"
+      author = "Gil Stolar"
+      reference = "https://https://github.com/gil121983"
+      date = "2021-01-13"
+   strings:
+      $re1 = /\(.{1,}\$.{1,}\=.{1,}\(.{1,}\)\)\.[^a-bA-B0-9]\$[^\=\$\(]\(.{1,}\)/ wide ascii fullword
+   condition:
+      all of them
+}
+
