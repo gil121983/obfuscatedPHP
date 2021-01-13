@@ -34,3 +34,15 @@ rule suspicious_concat {
    condition:
       2 of them
 }
+
+rule suspicious_replace {
+   meta:
+      description = "suspicious replace"
+      author = "Gil Stolar"
+      reference = "https://https://github.com/gil121983"
+      date = "2021-01-12"
+   strings:
+      $re1 = /\b.{1,}str_replace\(array.{1,}(\&\#59|\&lt|\&gt|\&\#63|\&\#34|G\&\#69|\&\#47|POST|GET|http:)*4.{1,}\b/ wide ascii fullword
+   condition:
+      all of them
+}
