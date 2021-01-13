@@ -3,7 +3,7 @@
    Author: Gil Stolar
    Date: 2021-01-06
    Identifier: obfuscatedPHP
-   Reference: https://https://github.com/gil121983
+   Reference: https://github.com/gil121983/obfuscatedPHP
 */
 
 /* Rule Set ----------------------------------------------------------------- */
@@ -12,7 +12,7 @@ rule obfus_bitwise {
    meta:
       description = "Obfuscated bitwise"
       author = "Gil Stolar"
-      reference = "https://https://github.com/gil121983"
+      reference = "https://github.com/gil121983/obfuscatedPHP"
       date = "2021-01-06"
    strings:
       $re1 = /\(.{1,}[\&\^\|\>{2}\<{2}]".{1,}"\)\.\(.{1,}[\&\^\|\>{2}\<{2}]".{1,}"\)\.\(.{1,}[\&\^\|\>{2}\<{2}]".{1,}"\)/ wide ascii fullword
@@ -25,7 +25,7 @@ rule suspicious_concat {
    meta:
       description = "suspicious concatenation"
       author = "Gil Stolar"
-      reference = "https://https://github.com/gil121983"
+      reference = "https://github.com/gil121983/obfuscatedPHP"
       date = "2021-01-06"
    strings:
       $re1 = /(\$.{1,}\[\d\]\.){5,}/ wide ascii fullword
@@ -39,7 +39,7 @@ rule suspicious_replace {
    meta:
       description = "suspicious replace"
       author = "Gil Stolar"
-      reference = "https://https://github.com/gil121983"
+      reference = "https://github.com/gil121983/obfuscatedPHP"
       date = "2021-01-12"
    strings:
       $re1 = /\b.{1,}str_replace\(array.{1,}(\&\#59|\&lt|\&gt|\&\#63|\&\#34|G\&\#69|\&\#47|POST|GET|http:)*4.{1,}\b/ wide ascii fullword
@@ -51,7 +51,7 @@ rule suspicious_function_call {
    meta:
       description = "suspicious function call"
       author = "Gil Stolar"
-      reference = "https://https://github.com/gil121983"
+      reference = "https://github.com/gil121983/obfuscatedPHP"
       date = "2021-01-13"
    strings:
       $re1 = /\(.{1,}\$.{1,}\=.{1,}\(.{1,}\)\)\.[^a-bA-B0-9]\$[^\=\$\(]\(.{1,}\)/ wide ascii fullword
