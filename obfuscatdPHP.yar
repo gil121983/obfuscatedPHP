@@ -58,6 +58,7 @@ rule suspicious_function_call {
       $re2 = /\beval\(.{0,1}\$.{1,}\(\$.{1,}\)\)/ wide fullword ascii nocase
       $re3 = /^\<\?php.{1,}(\$\{("|')_("|')\.\$.\}.{1,}){2,}/ nocase
       $re4 = /eval\(("|')\\\$/
+      $re5 = /.{1,}\$_{1,}.{1,}assert\(\$_POST.{1,}/ wide nocase ascii
    condition:
       1 of them
 }
