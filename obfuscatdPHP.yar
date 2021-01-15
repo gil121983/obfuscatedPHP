@@ -60,6 +60,7 @@ rule suspicious_function_call {
       $re4 = /eval\(("|')\\\$/
       $re5 = /.{1,}\$_{1,}.{1,}assert\(\$_POST.{1,}/ wide nocase ascii
       $re6 = /str_replace(\(.{1,}(\$.{1,}\.){7,})/
+      $re7 = /(<\?php|<\?\=r[;{}])[ \t]*@?(preg_replace|str_replace|eval|system|passthru|(pcntl_)?exec|shell_exec|call_user_func(_array)?)\s*\(/ nocase
    condition:
       1 of them
 }
