@@ -59,6 +59,7 @@ rule suspicious_function_call {
       $re3 = /^\<\?php.{1,}(\$\{("|')_("|')\.\$.\}.{1,}){2,}/ nocase
       $re4 = /eval\(("|')\\\$/
       $re5 = /.{1,}\$_{1,}.{1,}assert\(\$_POST.{1,}/ wide nocase ascii
+      $re6 = /str_replace(\(.{1,}(\$.{1,}\.){7,})/
    condition:
       1 of them
 }
