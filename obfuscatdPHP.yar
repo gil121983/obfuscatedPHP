@@ -73,7 +73,7 @@ rule concatenated_post {
       date = "2021-01-14"
    strings: 
       $re = /["'asertPOST\.{3,12}\n\}]{{0,1}(("|')_P[^OST]{0,20}("\."|'\."){0,1}O[^ST]{0,20}("\."|'\.'){0,1}S[^T]{0,11}("\."|'\.'){0,1}[^POS]{0,20}T("}))/ wide ascii    
-condition:
+   condition:
       /*for any i in (1..#re1) : ( @re1[i] != @re2[i])*/
       all of them
 }
